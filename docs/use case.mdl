@@ -11,7 +11,43 @@
 	(object Attribute
 	    tool       	"Java"
 	    name       	"IDE"
-	    value      	"Internal Editor"))
+	    value      	"Internal Editor")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply1"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply2"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagName3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagText3"
+	    value      	"")
+	(object Attribute
+	    tool       	"Java"
+	    name       	"UserDefineTagApply3"
+	    value      	""))
     quid       	"4B8C38E3032C"
     enforceClosureAutoLoad 	FALSE
     defaults   	(object defaults
@@ -45,7 +81,7 @@
 	    (object Class "User"
 		quid       	"4B8C3C05007D"
 		stereotype 	"Actor")
-	    (object Class "Admin"
+	    (object Class "Bussiness admin"
 		quid       	"4B8C3E3F0000"
 		stereotype 	"Actor")
 	    (object Class "Guest"
@@ -93,12 +129,14 @@
 		quid       	"4B8C3DCB0148")
 	    (object UseCase "Check login info"
 		quid       	"4B8C3E120196")
-	    (object UseCase "Manage places data"
+	    (object UseCase "Manage saved places data"
 		quid       	"4B8C3F340157")
 	    (object UseCase "Manage saved List"
 		quid       	"4B8C410903D8")
 	    (object UseCase "Search on trips"
 		quid       	"4B8C42E103A9")
+	    (object UseCase "Manage reviews on places"
+		quid       	"4B8C3CDA00CC")
 	    (object Association "$UNNAMED$0"
 		quid       	"4B8C3C45037A"
 		roles      	(list role_list
@@ -193,14 +231,14 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$23"
 			quid       	"4B8C3E6002F0"
-			supplier   	"Use Case View::Admin"
+			supplier   	"Use Case View::Bussiness admin"
 			quidu      	"4B8C3E3F0000")))
 	    (object Association "$UNNAMED$24"
 		quid       	"4B8C3F4A030D"
 		roles      	(list role_list
 		    (object Role "$UNNAMED$25"
 			quid       	"4B8C3F4B03C8"
-			supplier   	"Use Case View::Manage places data"
+			supplier   	"Use Case View::Manage saved places data"
 			quidu      	"4B8C3F340157"
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$26"
@@ -217,7 +255,7 @@
 			is_navigable 	TRUE)
 		    (object Role "$UNNAMED$29"
 			quid       	"4B8C3F590169"
-			supplier   	"Use Case View::Admin"
+			supplier   	"Use Case View::Bussiness admin"
 			quidu      	"4B8C3E3F0000")))
 	    (object Association "$UNNAMED$30"
 		quid       	"4B8C40840290"
@@ -242,6 +280,54 @@
 		    (object Role "$UNNAMED$35"
 			quid       	"4B8C42EF01F6"
 			supplier   	"Use Case View::User"
+			quidu      	"4B8C3C05007D")))
+	    (object Association "$UNNAMED$36"
+		quid       	"4B8C3A7D006E"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"4B8C3A7F0149"
+			supplier   	"Use Case View::Search on trips"
+			quidu      	"4B8C42E103A9"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"4B8C3A7F014B"
+			supplier   	"Use Case View::Guest"
+			quidu      	"4B8C4067036B")))
+	    (object Association "$UNNAMED$39"
+		quid       	"4B8C3AFE0187"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"4B8C3B01002F"
+			supplier   	"Use Case View::Search on places"
+			quidu      	"4B8C3D810196"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"4B8C3B010031"
+			supplier   	"Use Case View::Guest"
+			quidu      	"4B8C4067036B")))
+	    (object Association "$UNNAMED$42"
+		quid       	"4B8C3BA1004F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"4B8C3BA8005E"
+			supplier   	"Use Case View::Create account"
+			quidu      	"4B8C3C1D008C"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"4B8C3BA80060"
+			supplier   	"Use Case View::Bussiness admin"
+			quidu      	"4B8C3E3F0000")))
+	    (object Association "$UNNAMED$45"
+		quid       	"4B8C3CF800AC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"4B8C3CF901E5"
+			supplier   	"Use Case View::Manage reviews on places"
+			quidu      	"4B8C3CDA00CC"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"4B8C3CF901E7"
+			supplier   	"Use Case View::User"
 			quidu      	"4B8C3C05007D"))))
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
@@ -260,133 +346,9 @@
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
-		origin_y   	159
+		origin_y   	56
 		items      	(list diagram_item_list
-		    (object UseCaseView "Use Case View::Plan a trip" @1
-			location   	(1103, 531)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@1
-			    location   	(1103, 691)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Plan a trip")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C3C8D000F"
-			width      	394
-			height     	162)
-		    (object UseCaseView "Use Case View::Manage reviews on trips" @2
-			location   	(1093, 1140)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@2
-			    location   	(1093, 1298)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Manage reviews on trips")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C3CF101C5"
-			width      	525
-			height     	157)
-		    (object UseCaseView "Use Case View::Add photos of places" @3
-			location   	(1126, 1782)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@3
-			    location   	(1126, 1955)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Add photos of places")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C3D520119"
-			width      	413
-			height     	187)
-		    (object UseCaseView "Use Case View::Search on places" @4
-			location   	(347, 1309)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@4
-			    location   	(347, 1470)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Search on places")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C3D810196"
-			width      	444
-			height     	163)
-		    (object UseCaseView "Use Case View::Check email validality" @5
-			location   	(3050, 1271)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@5
-			    location   	(3050, 1409)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Check email validality")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C3DCB0148"
-			height     	118)
-		    (object UseCaseView "Use Case View::Check login info" @6
+		    (object UseCaseView "Use Case View::Check login info" @1
 			location   	(1818, 430)
 			font       	(object Font
 			    size       	10
@@ -398,7 +360,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@6
+			    Parent_View 	@1
 			    location   	(1818, 568)
 			    anchor_loc 	1
 			    nlines     	2
@@ -410,7 +372,56 @@
 			fill_color 	13434879
 			quidu      	"4B8C3E120196"
 			height     	118)
-		    (object UseCaseView "Use Case View::Login to the system" @7
+		    (object UseCaseView "Use Case View::Add and manage places data" @2
+			location   	(2406, 379)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(2406, 571)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Add and manage places data")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C3CA200EA"
+			width      	444
+			height     	225)
+		    (object UseCaseView "Use Case View::Manage saved List" @3
+			location   	(1937, 1027)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1937, 1165)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Manage saved List")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C410903D8"
+			height     	118)
+		    (object UseCaseView "Use Case View::Login to the system" @4
 			location   	(939, 195)
 			font       	(object Font
 			    size       	10
@@ -422,7 +433,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@7
+			    Parent_View 	@4
 			    location   	(939, 356)
 			    anchor_loc 	1
 			    nlines     	2
@@ -435,7 +446,7 @@
 			quidu      	"4B8C3C5E02DE"
 			width      	425
 			height     	163)
-		    (object DependencyView "" @8
+		    (object DependencyView "" @5
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -445,8 +456,8 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			stereotype 	(object SegLabel @9
-			    Parent_View 	@8
+			stereotype 	(object SegLabel @6
+			    Parent_View 	@5
 			    location   	(1415, 323)
 			    font       	(object Font
 				size       	10
@@ -468,14 +479,14 @@
 			    orientation 	1)
 			line_color 	3342489
 			quidu      	"4B8C3E260148"
-			client     	@7
-			supplier   	@6
+			client     	@4
+			supplier   	@1
 			vertices   	(list Points
 			    (1144, 248)
 			    (1706, 397))
 			line_style 	0)
-		    (object UseCaseView "Use Case View::Manage places data" @10
-			location   	(1061, 832)
+		    (object UseCaseView "Use Case View::Plan a trip" @7
+			location   	(1069, 481)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -486,24 +497,20 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@10
-			    location   	(1061, 983)
+			    Parent_View 	@7
+			    location   	(1069, 641)
 			    anchor_loc 	1
 			    nlines     	2
 			    max_width  	630
 			    justify    	0
-			    label      	"Manage places data")
+			    label      	"Plan a trip")
 			icon_style 	"Icon"
 			line_color 	3342489
 			fill_color 	13434879
-			quidu      	"4B8C3F340157"
-			width      	413
-			height     	144)
-		    (object ClassView "Class" "Use Case View::Admin" @11
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2856, 225)
+			quidu      	"4B8C3C8D000F"
+			width      	394
+			height     	162)
+		    (object DependencyView "" @8
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -513,291 +520,9 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@11
-			    location   	(2856, 385)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	324
-			    justify    	0
-			    label      	"Admin")
-			icon       	"Actor"
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"4B8C3E3F0000"
-			annotation 	8
-			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$21" @12
-			location   	(1970, 208)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"4B8C3E5E03B9"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$22" @13
-				Parent_View 	@12
-				location   	(-880, -245)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"4B8C3E6002EE"
-				client     	@12
-				supplier   	@7
-				vertices   	(list Points
-				    (1970, 208)
-				    (1144, 195))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$23" @14
-				Parent_View 	@12
-				location   	(-880, -245)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"4B8C3E6002F0"
-				client     	@12
-				supplier   	@11
-				vertices   	(list Points
-				    (1970, 208)
-				    (2796, 221))
-				line_style 	0)))
-		    (object UseCaseView "Use Case View::Add and manage places data" @15
-			location   	(2406, 379)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@15
-			    location   	(2406, 571)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Add and manage places data")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C3CA200EA"
-			width      	444
-			height     	225)
-		    (object AssociationViewNew "$UNNAMED$27" @16
-			location   	(2707, 270)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"4B8C3F5801F4"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$28" @17
-				Parent_View 	@16
-				location   	(-143, -183)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"4B8C3F590167"
-				client     	@16
-				supplier   	@15
-				vertices   	(list Points
-				    (2707, 270)
-				    (2619, 300))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$29" @18
-				Parent_View 	@16
-				location   	(-143, -183)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"4B8C3F590169"
-				client     	@16
-				supplier   	@11
-				vertices   	(list Points
-				    (2707, 270)
-				    (2796, 241))
-				line_style 	0)))
-		    (object ClassView "Class" "Use Case View::Guest" @19
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(3113, 874)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@19
-			    location   	(3113, 1034)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	324
-			    justify    	0
-			    label      	"Guest")
-			icon       	"Actor"
-			icon_style 	"Icon"
-			line_color 	3342489
-			quidu      	"4B8C4067036B"
-			annotation 	8
-			autoResize 	TRUE)
-		    (object UseCaseView "Use Case View::Create account" @20
-			location   	(2715, 876)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@20
-			    location   	(2715, 1040)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Create account")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C3C1D008C"
-			width      	413
-			height     	169)
-		    (object AssociationViewNew "$UNNAMED$30" @21
-			location   	(2984, 873)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"4B8C40840290"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$31" @22
-				Parent_View 	@21
-				location   	(1033, -1007)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"4B8C408502BF"
-				client     	@21
-				supplier   	@20
-				vertices   	(list Points
-				    (2984, 873)
-				    (2914, 873))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$32" @23
-				Parent_View 	@21
-				location   	(1033, -1007)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"4B8C408502C1"
-				client     	@21
-				supplier   	@19
-				vertices   	(list Points
-				    (2984, 873)
-				    (3054, 874))
-				line_style 	0)))
-		    (object DependencyView "" @24
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	(object SegLabel @25
-			    Parent_View 	@24
-			    location   	(2920, 1105)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    anchor     	10
-			    anchor_loc 	1
-			    nlines     	1
-			    max_width  	450
-			    justify    	0
-			    label      	"<<include>>"
-			    pctDist    	0.409639
-			    height     	9
-			    orientation 	0)
-			line_color 	3342489
-			quidu      	"4B8C3DEE0129"
-			client     	@20
-			supplier   	@5
-			vertices   	(list Points
-			    (2853, 1039)
-			    (2999, 1213))
-			line_style 	0)
-		    (object UseCaseView "Use Case View::Manage saved List" @26
-			location   	(2024, 1746)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@26
-			    location   	(2024, 1884)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Manage saved List")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C410903D8"
-			height     	118)
-		    (object DependencyView "" @27
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	(object SegLabel @28
-			    Parent_View 	@27
-			    location   	(1550, 1090)
+			stereotype 	(object SegLabel @9
+			    Parent_View 	@8
+			    location   	(1484, 717)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -818,13 +543,14 @@
 			    orientation 	0)
 			line_color 	3342489
 			quidu      	"4B8C411701B5"
-			client     	@1
-			supplier   	@26
+			client     	@7
+			supplier   	@3
 			vertices   	(list Points
-			    (1197, 659)
-			    (1979, 1688))
+			    (1193, 557)
+			    (1846, 969))
 			line_style 	0)
-		    (object DependencyView "" @29
+		    (object UseCaseView "Use Case View::Manage reviews on trips" @10
+			location   	(973, 1345)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -834,9 +560,200 @@
 			    strike     	FALSE
 			    color      	0
 			    default_color 	TRUE)
-			stereotype 	(object SegLabel @30
-			    Parent_View 	@29
-			    location   	(1378, 1554)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(973, 1503)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Manage reviews on trips")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C3CF101C5"
+			width      	525
+			height     	157)
+		    (object UseCaseView "Use Case View::Add photos of places" @11
+			location   	(508, 1909)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(508, 2082)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Add photos of places")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C3D520119"
+			width      	413
+			height     	187)
+		    (object UseCaseView "Use Case View::Manage saved places data" @12
+			location   	(258, 1151)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(258, 1302)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Manage saved places data")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C3F340157"
+			width      	413
+			height     	144)
+		    (object UseCaseView "Use Case View::Search on trips" @13
+			location   	(1733, 1692)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(1733, 1890)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Search on trips")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C42E103A9"
+			width      	531
+			height     	238)
+		    (object ClassView "Class" "Use Case View::Guest" @14
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3002, 1857)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(3002, 2017)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	325
+			    justify    	0
+			    label      	"Guest")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"4B8C4067036B"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$36" @15
+			location   	(2465, 1783)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4B8C3A7D006E"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$37" @16
+				Parent_View 	@15
+				location   	(-648, 909)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3A7F0149"
+				client     	@15
+				supplier   	@13
+				vertices   	(list Points
+				    (2465, 1783)
+				    (1988, 1720))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$38" @17
+				Parent_View 	@15
+				location   	(-648, 909)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3A7F014B"
+				client     	@15
+				supplier   	@14
+				vertices   	(list Points
+				    (2465, 1783)
+				    (2943, 1846))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Search on places" @18
+			location   	(1125, 836)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1125, 997)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Search on places")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C3D810196"
+			width      	444
+			height     	163)
+		    (object DependencyView "" @19
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @20
+			    Parent_View 	@19
+			    location   	(1636, 932)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -857,13 +774,222 @@
 			    orientation 	0)
 			line_color 	3342489
 			quidu      	"4B8C42420000"
-			client     	@4
-			supplier   	@26
+			client     	@18
+			supplier   	@3
 			vertices   	(list Points
-			    (560, 1361)
-			    (1914, 1714))
+			    (1338, 882)
+			    (1826, 997))
 			line_style 	0)
-		    (object ClassView "Class" "Use Case View::User" @31
+		    (object AssociationViewNew "$UNNAMED$39" @21
+			location   	(2112, 1372)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4B8C3AFE0187"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$40" @22
+				Parent_View 	@21
+				location   	(-1001, 498)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3B01002F"
+				client     	@21
+				supplier   	@18
+				vertices   	(list Points
+				    (2112, 1372)
+				    (1281, 920))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$41" @23
+				Parent_View 	@21
+				location   	(-1001, 498)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3B010031"
+				client     	@21
+				supplier   	@14
+				vertices   	(list Points
+				    (2112, 1372)
+				    (2943, 1824))
+				line_style 	0)))
+		    (object ClassView "Class" "Use Case View::Bussiness admin" @24
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2856, 225)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@24
+			    location   	(2856, 385)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	324
+			    justify    	0
+			    label      	"Bussiness admin")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"4B8C3E3F0000"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$21" @25
+			location   	(1970, 208)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4B8C3E5E03B9"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @26
+				Parent_View 	@25
+				location   	(-880, -245)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3E6002EE"
+				client     	@25
+				supplier   	@4
+				vertices   	(list Points
+				    (1970, 208)
+				    (1144, 195))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @27
+				Parent_View 	@25
+				location   	(-880, -245)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3E6002F0"
+				client     	@25
+				supplier   	@24
+				vertices   	(list Points
+				    (1970, 208)
+				    (2796, 221))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$27" @28
+			location   	(2707, 270)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4B8C3F5801F4"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$28" @29
+				Parent_View 	@28
+				location   	(-143, -183)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3F590167"
+				client     	@28
+				supplier   	@2
+				vertices   	(list Points
+				    (2707, 270)
+				    (2619, 300))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$29" @30
+				Parent_View 	@28
+				location   	(-143, -183)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3F590169"
+				client     	@28
+				supplier   	@24
+				vertices   	(list Points
+				    (2707, 270)
+				    (2796, 241))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Create account" @31
+			location   	(2692, 1335)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@31
+			    location   	(2692, 1499)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Create account")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C3C1D008C"
+			width      	413
+			height     	169)
+		    (object AssociationViewNew "$UNNAMED$30" @32
+			location   	(2877, 1649)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4B8C40840290"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @33
+				Parent_View 	@32
+				location   	(926, -231)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C408502BF"
+				client     	@32
+				supplier   	@31
+				vertices   	(list Points
+				    (2877, 1649)
+				    (2802, 1524))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @34
+				Parent_View 	@32
+				location   	(926, -231)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C408502C1"
+				client     	@32
+				supplier   	@14
+				vertices   	(list Points
+				    (2877, 1649)
+				    (2952, 1775))
+				line_style 	0)))
+		    (object ClassView "Class" "Use Case View::User" @35
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -878,11 +1004,11 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@31
+			    Parent_View 	@35
 			    location   	(317, 782)
 			    anchor_loc 	1
 			    nlines     	2
-			    max_width  	324
+			    max_width  	325
 			    justify    	0
 			    label      	"User")
 			icon       	"Actor"
@@ -891,7 +1017,7 @@
 			quidu      	"4B8C3C05007D"
 			annotation 	8
 			autoResize 	TRUE)
-		    (object AssociationViewNew "$UNNAMED$3" @32
+		    (object AssociationViewNew "$UNNAMED$3" @36
 			location   	(565, 444)
 			font       	(object Font
 			    size       	10
@@ -906,32 +1032,32 @@
 			line_color 	3342489
 			quidu      	"4B8C3C850242"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$4" @33
-				Parent_View 	@32
+			    (object RoleView "$UNNAMED$4" @37
+				Parent_View 	@36
 				location   	(307, -306)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3C860232"
-				client     	@32
-				supplier   	@7
+				client     	@36
+				supplier   	@4
 				vertices   	(list Points
 				    (565, 444)
 				    (757, 310))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$5" @34
-				Parent_View 	@32
+			    (object RoleView "$UNNAMED$5" @38
+				Parent_View 	@36
 				location   	(307, -306)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3C860234"
-				client     	@32
-				supplier   	@31
+				client     	@36
+				supplier   	@35
 				vertices   	(list Points
 				    (565, 444)
 				    (374, 578))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$6" @35
-			location   	(642, 582)
+		    (object AssociationViewNew "$UNNAMED$6" @39
+			location   	(625, 559)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -945,32 +1071,32 @@
 			line_color 	3342489
 			quidu      	"4B8C3C9D030D"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$7" @36
-				Parent_View 	@35
-				location   	(384, -168)
+			    (object RoleView "$UNNAMED$7" @40
+				Parent_View 	@39
+				location   	(367, -191)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3C9E0232"
-				client     	@35
-				supplier   	@1
+				client     	@39
+				supplier   	@7
 				vertices   	(list Points
-				    (642, 582)
-				    (911, 550))
+				    (625, 559)
+				    (877, 512))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$8" @37
-				Parent_View 	@35
-				location   	(384, -168)
+			    (object RoleView "$UNNAMED$8" @41
+				Parent_View 	@39
+				location   	(367, -191)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3C9E0242"
-				client     	@35
-				supplier   	@31
+				client     	@39
+				supplier   	@35
 				vertices   	(list Points
-				    (642, 582)
-				    (374, 614))
+				    (625, 559)
+				    (374, 606))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$12" @38
-			location   	(674, 861)
+		    (object AssociationViewNew "$UNNAMED$12" @42
+			location   	(636, 976)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -984,32 +1110,32 @@
 			line_color 	3342489
 			quidu      	"4B8C3D42004E"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$13" @39
-				Parent_View 	@38
-				location   	(416, 111)
+			    (object RoleView "$UNNAMED$13" @43
+				Parent_View 	@42
+				location   	(378, 226)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3D4301F4"
-				client     	@38
-				supplier   	@2
+				client     	@42
+				supplier   	@10
 				vertices   	(list Points
-				    (674, 861)
-				    (975, 1064))
+				    (636, 976)
+				    (898, 1269))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$14" @40
-				Parent_View 	@38
-				location   	(416, 111)
+			    (object RoleView "$UNNAMED$14" @44
+				Parent_View 	@42
+				location   	(378, 226)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3D4301F6"
-				client     	@38
-				supplier   	@31
+				client     	@42
+				supplier   	@35
 				vertices   	(list Points
-				    (674, 861)
-				    (374, 659))
+				    (636, 976)
+				    (374, 684))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$15" @41
-			location   	(714, 1195)
+		    (object AssociationViewNew "$UNNAMED$15" @45
+			location   	(416, 1312)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1023,32 +1149,32 @@
 			line_color 	3342489
 			quidu      	"4B8C3D6A038A"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$16" @42
-				Parent_View 	@41
-				location   	(456, 445)
+			    (object RoleView "$UNNAMED$16" @46
+				Parent_View 	@45
+				location   	(158, 562)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3D6C033C"
-				client     	@41
-				supplier   	@3
+				client     	@45
+				supplier   	@11
 				vertices   	(list Points
-				    (714, 1195)
-				    (1057, 1690))
+				    (416, 1312)
+				    (490, 1817))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$17" @43
-				Parent_View 	@41
-				location   	(456, 445)
+			    (object RoleView "$UNNAMED$17" @47
+				Parent_View 	@45
+				location   	(158, 562)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3D6C033E"
-				client     	@41
-				supplier   	@31
+				client     	@45
+				supplier   	@35
 				vertices   	(list Points
-				    (714, 1195)
-				    (372, 700))
+				    (416, 1312)
+				    (342, 807))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$18" @44
-			location   	(331, 1017)
+		    (object AssociationViewNew "$UNNAMED$18" @48
+			location   	(640, 705)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1062,32 +1188,32 @@
 			line_color 	3342489
 			quidu      	"4B8C3D9B03B9"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$19" @45
-				Parent_View 	@44
-				location   	(14, 395)
+			    (object RoleView "$UNNAMED$19" @49
+				Parent_View 	@48
+				location   	(323, 83)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3D9E0109"
-				client     	@44
-				supplier   	@4
+				client     	@48
+				supplier   	@18
 				vertices   	(list Points
-				    (331, 1017)
-				    (340, 1228))
+				    (640, 705)
+				    (907, 776))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$20" @46
-				Parent_View 	@44
-				location   	(14, 395)
+			    (object RoleView "$UNNAMED$20" @50
+				Parent_View 	@48
+				location   	(323, 83)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3D9E010B"
-				client     	@44
-				supplier   	@31
+				client     	@48
+				supplier   	@35
 				vertices   	(list Points
-				    (331, 1017)
-				    (323, 807))
+				    (640, 705)
+				    (374, 635))
 				line_style 	0)))
-		    (object AssociationViewNew "$UNNAMED$24" @47
-			location   	(616, 704)
+		    (object AssociationViewNew "$UNNAMED$24" @51
+			location   	(277, 943)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1101,57 +1227,32 @@
 			line_color 	3342489
 			quidu      	"4B8C3F4A030D"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$25" @48
-				Parent_View 	@47
-				location   	(299, 82)
+			    (object RoleView "$UNNAMED$25" @52
+				Parent_View 	@51
+				location   	(-40, 321)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3F4B03C8"
-				client     	@47
-				supplier   	@10
+				client     	@51
+				supplier   	@12
 				vertices   	(list Points
-				    (616, 704)
-				    (859, 772))
+				    (277, 943)
+				    (261, 1080))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$26" @49
-				Parent_View 	@47
-				location   	(299, 82)
+			    (object RoleView "$UNNAMED$26" @53
+				Parent_View 	@51
+				location   	(-40, 321)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C3F4B03CA"
-				client     	@47
-				supplier   	@31
+				client     	@51
+				supplier   	@35
 				vertices   	(list Points
-				    (616, 704)
-				    (374, 636))
+				    (277, 943)
+				    (294, 807))
 				line_style 	0)))
-		    (object UseCaseView "Use Case View::Search on trips" @50
-			location   	(534, 1794)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@50
-			    location   	(534, 1992)
-			    anchor_loc 	1
-			    nlines     	2
-			    max_width  	630
-			    justify    	0
-			    label      	"Search on trips")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"4B8C42E103A9"
-			width      	531
-			height     	238)
-		    (object AssociationViewNew "$UNNAMED$33" @51
-			location   	(428, 1242)
+		    (object AssociationViewNew "$UNNAMED$33" @54
+			location   	(978, 1122)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1165,29 +1266,93 @@
 			line_color 	3342489
 			quidu      	"4B8C42ED0213"
 			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$34" @52
-				Parent_View 	@51
-				location   	(111, 620)
+			    (object RoleView "$UNNAMED$34" @55
+				Parent_View 	@54
+				location   	(661, 500)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C42EF01F4"
-				client     	@51
-				supplier   	@50
+				client     	@54
+				supplier   	@13
 				vertices   	(list Points
-				    (428, 1242)
-				    (507, 1677))
+				    (978, 1122)
+				    (1582, 1579))
 				line_style 	0)
-			    (object RoleView "$UNNAMED$35" @53
-				Parent_View 	@51
-				location   	(111, 620)
+			    (object RoleView "$UNNAMED$35" @56
+				Parent_View 	@54
+				location   	(661, 500)
 				stereotype 	TRUE
 				line_color 	3342489
 				quidu      	"4B8C42EF01F6"
-				client     	@51
-				supplier   	@31
+				client     	@54
+				supplier   	@35
 				vertices   	(list Points
-				    (428, 1242)
-				    (349, 807))
+				    (978, 1122)
+				    (374, 665))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Manage reviews on places" @57
+			location   	(910, 1738)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@57
+			    location   	(910, 1895)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	630
+			    justify    	0
+			    label      	"Manage reviews on places")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4B8C3CDA00CC"
+			width      	400
+			height     	156)
+		    (object AssociationViewNew "$UNNAMED$45" @58
+			location   	(614, 1187)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4B8C3CF800AC"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$46" @59
+				Parent_View 	@58
+				location   	(297, 565)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3CF901E5"
+				client     	@58
+				supplier   	@57
+				vertices   	(list Points
+				    (614, 1187)
+				    (867, 1663))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$47" @60
+				Parent_View 	@58
+				location   	(297, 565)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4B8C3CF901E7"
+				client     	@58
+				supplier   	@35
+				vertices   	(list Points
+				    (614, 1187)
+				    (362, 712))
 				line_style 	0)))))))
     root_category 	(object Class_Category "Logical View"
 	quid       	"4B8C38E3032D"
