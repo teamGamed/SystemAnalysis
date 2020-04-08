@@ -702,7 +702,7 @@
 	    (object ClassDiagram "systemClassDiagrm"
 		quid       	"5E8D034A0393"
 		title      	"systemClassDiagrm"
-		zoom       	95
+		zoom       	60
 		max_height 	28350
 		max_width  	21600
 		origin_x   	0
@@ -1229,7 +1229,7 @@
 			    icon_style 	"Icon"
 			    anchor     	2
 			    nlines     	3
-			    max_width  	359
+			    max_width  	567
 			    justify    	0)
 			width      	58
 			height     	58
@@ -1455,7 +1455,7 @@
 			    icon_style 	"Icon"
 			    anchor     	2
 			    nlines     	4
-			    max_width  	398
+			    max_width  	630
 			    justify    	0)
 			width      	58
 			height     	58
@@ -1761,7 +1761,7 @@
 			    icon_style 	"Icon"
 			    anchor     	2
 			    nlines     	3
-			    max_width  	372
+			    max_width  	588
 			    justify    	0)
 			width      	58
 			height     	58
@@ -1809,7 +1809,7 @@
 			    icon_style 	"Icon"
 			    anchor     	2
 			    nlines     	3
-			    max_width  	359
+			    max_width  	567
 			    justify    	0)
 			width      	58
 			height     	58
@@ -1868,7 +1868,7 @@
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
-			location   	(3776, 1168)
+			location   	(3984, 1168)
 			font       	(object Font
 			    size       	10
 			    face       	"Arial"
@@ -1880,7 +1880,7 @@
 			    default_color 	TRUE)
 			label      	(object ItemLabel
 			    Parent_View 	@56
-			    location   	(3775, 1276)
+			    location   	(3983, 1276)
 			    anchor_loc 	1
 			    nlines     	2
 			    max_width  	361
@@ -1893,7 +1893,7 @@
 			quidu      	"5E8E2713009A"
 			compartment 	(object Compartment
 			    Parent_View 	@56
-			    location   	(3601, 1316)
+			    location   	(3729, 1316)
 			    font       	(object Font
 				size       	10
 				face       	"Arial"
@@ -1906,7 +1906,7 @@
 			    icon_style 	"Icon"
 			    anchor     	2
 			    nlines     	3
-			    max_width  	346
+			    max_width  	547
 			    justify    	0)
 			width      	58
 			height     	58
